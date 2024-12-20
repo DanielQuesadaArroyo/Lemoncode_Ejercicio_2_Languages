@@ -13,7 +13,7 @@ console.log("RESULTADO Head: " + head(["1", "2", "3"]));
 
 /** Inicio. 2. Array operations: Tail */
 
-console.log("1. Array operations: Tail")
+console.log("2. Array operations: Tail")
 
 const tail = (array) => {
   let [first, ...rest] = array;
@@ -38,14 +38,14 @@ console.log("RESULTADO Init: " + init(["1", "2", "3"]));
 
 /** Inicio. 4. Array operations: Last */
 
-console.log("3. Array operations: Last")
+console.log("4. Array operations: Last")
 
 const last = (array) => {
   return [...array].pop();
 };
 
-
-console.log("RESULTADO Last: " + last(["1", "2", "3"]));
+let arr = ["1", "2", "3"];
+console.log("RESULTADO Last: " + last(arr));
 /** Fin. 4. Array operations. Last */
 
 /** Inicio. 2. Concat */
@@ -66,7 +66,7 @@ console.log("2. Concat. Opcional")
 const opcional = (...args) => {
   let array = [];
   for (let arg of args) {
-    array = array.concat(arg);
+    array += (array.length == 0) ? [...arg] : "," + [...arg];
   }
   return array;
 };
